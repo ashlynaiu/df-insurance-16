@@ -1,40 +1,14 @@
-<!-- <div class="mobileContainer-header">
-	<h1>Your Financial Advisor wants to discuss college and goal planning.</h1>
-	<p>Select the best time for an hour meeting.</p>
-</div>
-<div class="mobileContainer-body">
-	<div class="mobile-dateSelect">
-		<div class="slds-form-element">
-			<label class="slds-form-element__label" for="select-01">Select a Date</label>
-			<div class="slds-form-element__control">
-				<div class="slds-select_container">
-					<select id="select-01" class="slds-select">
-						<option>October 5, 2016</option>
-						<option>October 6, 2016</option>
-						<option>October 7, 2016</option>
-						<option>October 8, 2016</option>
-					</select>
-				</div>
-			</div>
-		</div>
-		<div class="mobile-inputButton">
-			<button class="slds-button slds-button--brand">Search</button>
-		</div>
+<!--Instagram -->
+	<div class="imageWrapper--instagram" ng-if="imageStates[2].show" ng-class="imageStates[2].show && delayFade ? 'fadeShow' : 'fadeHide'"">
+		<img src="/images/{{imageStates[2].name}}.png" alt="{{imageStates[2].name}}" />
 	</div>
 
-	<p>These times are open based on your personal and financial advisor's calendar</p>
-
-	<div class="mobile-timeSelect">
-		<button ng-repeat="button in buttonModel" class="slds-button slds-button--neutral" ng-click="toggleButtons(button.name)" ng-class="button.on ? 'isSelected' : 'notSelected'">{{button.text}}</button>
+<!--Share -->
+	<div class="imageWrapper--share" ng-class="imageStates[1].show ? 'slideRightShow' : 'slideRightHide'" ng-click="goToInstagram()">
+		<img src="/images/{{imageStates[1].name}}.png" alt="{{imageStates[1].name}}" />
 	</div>
-</div>
 
-<div class="mobileContainer-footer">
-	<button class="slds-button slds-button--brand" ui-sref="home">Schedule Meeting</button>
-</div> -->
-
-<div ng-repeat="imageState in imageStates">
-	<div ng-if="imageState.show">
-		<img src="/images/{{imageState.name}}.png" alt="{{imageState.name}}" />
-	</div>
+<!--Camera -->
+<div class="imageWrapper--camera" ng-if="imageStates[0].show" ng-click="slideShare()">
+	<img src="/images/{{imageStates[0].name}}.png" alt="{{imageStates[0].name}}"/>
 </div>
