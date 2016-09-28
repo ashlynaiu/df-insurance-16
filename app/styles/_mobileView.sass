@@ -10,7 +10,7 @@
 	top: 0
 	right: 0
 
-.imageWrapper--share, .imageWrapper--open
+.imageWrapper--share, .imageWrapper--open, .imageWrapper--success
 	@extend %imageWrapper
 	z-index: 200
 	transition: $standard-animate
@@ -18,6 +18,11 @@
 .imageWrapper--instagram, .imageWrapper--refOff
 	@extend %imageWrapper
 	z-index: 300
+	transition: $standard-animate
+
+.imageWrapper--refOn
+	@extend %imageWrapper
+	z-index: 400
 	transition: $standard-animate
 
 .slideRightHide

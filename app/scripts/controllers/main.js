@@ -20,22 +20,24 @@ angular.module('DF16Insurance')
 		};
 
 		$scope.showNotification = function() {
+			//Hide old share screen
+			$scope.imageStates[1].show = false;
+			//Show notification
 			$scope.imageStates[3].show = true;
 		};
 
 		$scope.showDetails = function() {
-			//Fade out notification
-			$scope.imageStates[3].show = false;
-			//Hide Share Screen
-			$scope.imageStates[1].show = false;
 			//Reveal new details screen behind current
 			$scope.imageStates[4].show = true;
-			//Fade out instagram image out
-			$scope.delayFade = false;
-			//Hide instagram
+			//Fade out notification
+			$scope.imageStates[3].show = false;
+			//Fade out instagram image
 			$timeout(function() {
-				$scope.imageStates[2].show = false;
-			}, 1000);
+				$scope.delayFade = false;
+				$timeout(function() {
+					$scope.imageStates[2].show = false;
+				}, 500);
+			}, 500);
 		};
 
 		$scope.openCumulus = function() {
@@ -44,9 +46,19 @@ angular.module('DF16Insurance')
 			$timeout(function() {
 				$scope.imageStates[6].show = true;
 			}, 2000);
-			//Nice, let's turn some layers off
+		};
+
+		$scope.showRefOn = function() {
+			$scope.imageStates[7].show = true;
+			//Hide old screens
 			$timeout(function() {
 				$scope.imageStates[4].show = false;
+				$scope.imageStates[5].show = false;
+				$scope.imageStates[6].show = false;
 			}, 500);
+		};
+
+		$scope.goToSuccess = function() {
+			$scope.imageStates[8].show = true;
 		};
 	});

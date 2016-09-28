@@ -1,11 +1,16 @@
-<!--Open Cumulus imageStates[7]-->
-<div class="imageWrapper--refOff" ng-if="imageStates[5].show" ng-class="imageStates[6].show ? 'fadeShow' : 'fadeHide'" ng-click="showDetails()">
+<!--On Referrals Page imageStates[7]-->
+<div class="imageWrapper--refOn" ng-if="imageStates[7].show" ng-class="imageStates[8].show ? 'fadeHide' : 'fadeShow'" ng-click="goToSuccess()">
+	<img src="/images/{{imageStates[7].name}}.png" alt="{{imageStates[7].name}}" />
+</div>
+
+<!--Off Referrals Page imageStates[6]-->
+<div class="imageWrapper--refOff" ng-if="imageStates[5].show" ng-class="imageStates[6].show ? 'fadeShow' : 'fadeHide'" ng-click="showRefOn()">
 	<img src="/images/{{imageStates[6].name}}.png" alt="{{imageStates[6].name}}" />
 </div>
 
-<!--Open Cumulus imageStates[6]-->
-<div class="imageWrapper--refOff" ng-if="imageStates[5].show" ng-class="imageStates[6].show ? 'fadeShow' : 'fadeHide'" ng-click="showDetails()">
-	<img src="/images/{{imageStates[6].name}}.png" alt="{{imageStates[6].name}}" />
+<!--Success Page imageStates[8]-->
+<div class="imageWrapper--success" ng-if="imageStates[7].show">
+	<img src="/images/{{imageStates[8].name}}.png" alt="{{imageStates[8].name}}" />
 </div>
 
 <!--Open Cumulus imageStates[5]-->
