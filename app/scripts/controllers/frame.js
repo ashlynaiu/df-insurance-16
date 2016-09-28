@@ -11,6 +11,7 @@ angular.module('DF16Insurance')
 				name: imageNames[i],
 				show: false
 			};
+			//Allow a start point
 			if (imageNames[i] === 'camera') {
 				newVal.show = true;
 			}
