@@ -10,12 +10,12 @@
 	top: 0
 	right: 0
 
-.imageWrapper--share
+.imageWrapper--share, .imageWrapper--open
 	@extend %imageWrapper
 	z-index: 200
 	transition: $standard-animate
 
-.imageWrapper--instagram
+.imageWrapper--instagram, .imageWrapper--refOff
 	@extend %imageWrapper
 	z-index: 300
 	transition: $standard-animate
@@ -31,3 +31,20 @@
 
 .fadeHide
 	opacity: 0
+
+.imageWrapper--notification
+	z-index: 400
+	transition: $standard-animate
+	position: absolute
+	width: 387px
+
+.imageWrapper--details
+	@extend %imageWrapper
+	top: 0
+	right: 0
+
+.slideNotificationHide
+	top: -104px
+
+.slideNotificationShow
+	top: 0
