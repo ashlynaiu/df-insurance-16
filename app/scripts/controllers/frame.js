@@ -17,5 +17,4 @@ angular.module('DF16Insurance')
 			}
 			$scope.imageStates.push(newVal);
 		}
-		console.log($scope.imageStates);
 	});
